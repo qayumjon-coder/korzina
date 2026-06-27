@@ -1,54 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Savat — JavaScript amaliyoti</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<div class="preview">
-    <div class="container">
-        <div class="tabcontainer">
-            <div class="tabcontent">
-                <img src="img/tabs/vegy.jpg" alt="vegy">
-                <div class="tabcontent__descr">
-                    Меню "Фитнес" - это новый подход к приготовлению блюд: больше свежих овощей и фруктов. Для людей, которые интересуются спортом; активных и здоровых. Это абсолютно новый продукт с оптимальной ценой и высоким качеством!
-                </div>
-            </div>
-            <div class="tabcontent">
-                <img src="img/tabs/elite.jpg" alt="elite">
-                <div class="tabcontent__descr">
-                    Меню “Премиум” - мы используем не только красивый дизайн упаковки, но и качественное исполнение блюд. Красная рыба, морепродукты, фрукты - ресторанное меню без похода в ресторан!
-                </div>
-            </div>
-            <div class="tabcontent">
-                <img src="img/tabs/post.jpg" alt="post">
-                <div class="tabcontent__descr">
-                    Наше специальное “Постное меню” - это тщательный подбор ингредиентов: полное отсутствие продуктов животного происхождения. Полная гармония с собой и природой в каждом элементе! Все будет Ом!
-                </div>
-            </div>
-            <div class="tabcontent">
-                <img src="img/tabs/vegy.jpg" alt="vegy">
-                <div class="tabcontent__descr">
-                    Меню "Сбалансированное" - это соответствие вашего рациона всем научным рекомендациям. Мы тщательно просчитываем вашу потребность в к/б/ж/у и создаем лучшие блюда для вас.
-                </div>
-            </div>
-            <div class="tabheader">
-                <h3>Выберите стиль питания</h3>
-                <div class="tabheader__items">
-                    <div class="tabheader__item tabheader__item_active">Фитнес</div>
-                    <div class="tabheader__item">Премиум</div>
-                    <div class="tabheader__item">Постное</div>
-                    <div class="tabheader__item">Сбалансированное</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+  <div class="page-bg"></div>
 
-<div class="divider"></div>
-<script src="js/script.js"></script>
+  <header class="top-bar">
+    <button class="open-cart-btn" id="openCartBtn" type="button">
+      Korzinani ochish
+      <span class="cart-count-badge" id="cartCount">0</span>
+    </button>
+  </header>
+
+  <main class="panel">
+    <div class="product-grid" id="productList">
+
+      <article class="product-card" data-id="1" data-name="Non" data-price="3000" data-unit="dona" data-image="https://loremflickr.com/400/300/bread">
+        <img class="product-card__img" src="https://loremflickr.com/400/300/bread" alt="Non" />
+        <button class="btn btn--buy" type="button">Sotib olish!</button>
+      </article>
+
+      <article class="product-card" data-id="2" data-name="Rezavor mevalar" data-price="22000" data-unit="quti" data-image="https://loremflickr.com/400/300/berries">
+        <img class="product-card__img" src="https://loremflickr.com/400/300/berries" alt="Rezavor mevalar" />
+        <button class="btn btn--buy" type="button">Sotib olish!</button>
+      </article>
+
+      <article class="product-card" data-id="3" data-name="Ko'k mevalar" data-price="25000" data-unit="quti" data-image="https://loremflickr.com/400/300/blueberry">
+        <img class="product-card__img" src="https://loremflickr.com/400/300/blueberry" alt="Ko'k mevalar" />
+        <button class="btn btn--buy" type="button">Sotib olish!</button>
+      </article>
+
+      <article class="product-card" data-id="4" data-name="Asal" data-price="48000" data-unit="banka" data-image="https://loremflickr.com/400/300/honey">
+        <img class="product-card__img" src="https://loremflickr.com/400/300/honey" alt="Asal" />
+        <button class="btn btn--buy" type="button">Sotib olish!</button>
+      </article>
+
+      <article class="product-card" data-id="5" data-name="Pomidor" data-price="8000" data-unit="kg" data-image="https://loremflickr.com/400/300/tomato">
+        <img class="product-card__img" src="https://loremflickr.com/400/300/tomato" alt="Pomidor" />
+        <button class="btn btn--buy" type="button">Sotib olish!</button>
+      </article>
+
+      <article class="product-card" data-id="6" data-name="Qulupnay" data-price="35000" data-unit="kg" data-image="https://loremflickr.com/400/300/strawberry">
+        <img class="product-card__img" src="https://loremflickr.com/400/300/strawberry" alt="Qulupnay" />
+        <button class="btn btn--buy" type="button">Sotib olish!</button>
+      </article>
+
+      <article class="product-card" data-id="7" data-name="Brokkoli" data-price="14000" data-unit="kg" data-image="https://loremflickr.com/400/300/broccoli">
+        <img class="product-card__img" src="https://loremflickr.com/400/300/broccoli" alt="Brokkoli" />
+        <button class="btn btn--buy" type="button">Sotib olish!</button>
+      </article>
+
+      <article class="product-card" data-id="8" data-name="Avokado" data-price="20000" data-unit="dona" data-image="https://loremflickr.com/400/300/avocado">
+        <img class="product-card__img" src="https://loremflickr.com/400/300/avocado" alt="Avokado" />
+        <button class="btn btn--buy" type="button">Sotib olish!</button>
+      </article>
+
+    </div>
+  </main>
+
+  <!--
+    Savat (korzina) modal oynasi.
+    Default holatda yashirin: .modal-overlay { display:none } (style.css'da).
+    JS shu klassni boshqaradi:
+      ochish  -> cartModalOverlay.classList.add('is-open')
+      yopish  -> cartModalOverlay.classList.remove('is-open')
+    (Bu klassni qo'shish/o'chirish kodini sen o'zing yozasan — bu yerda faqat shablon.)
+  -->
+  <div class="modal-overlay" id="cartModalOverlay">
+    <div class="modal" id="cartModal" role="dialog" aria-labelledby="cartModalTitle">
+      <div class="modal__header">
+        <h2 id="cartModalTitle">Savat</h2>
+        <button class="modal__close" id="closeCartBtn" type="button" aria-label="Yopish">✕</button>
+      </div>
+
+      <!--
+        Mahsulot savatga qo'shilganda JS shu yerga quyidagi <li> ni qo'shadi:
+
+        <li class="cart-item" data-id="1">
+          <img class="cart-item__img" src="https://loremflickr.com/400/300/bread" alt="Non" />
+          <div class="cart-item__info">
+            <p class="cart-item__name">Non</p>
+            <p class="cart-item__unit-price">3 000 so'm / dona</p>
+          </div>
+          <div class="cart-item__qty">
+            <button class="qty-btn qty-btn--minus" type="button">−</button>
+            <span class="qty-value">1</span>
+            <button class="qty-btn qty-btn--plus" type="button">+</button>
+          </div>
+          <span class="cart-item__total">3 000 so'm</span>
+          <button class="cart-item__remove" type="button" aria-label="O'chirish">✕</button>
+        </li>
+      -->
+      <ul class="cart__list" id="cartList">
+        
+      </ul>
+
+      <p class="cart__empty" id="cartEmpty">Savat hozircha bo'sh</p>
+
+      <div class="modal__footer">
+        <button class="cart__clear" id="clearCart" type="button">Tozalash</button>
+        <div class="cart__total-row">
+          <span>Jami:</span>
+          <span class="cart__total" id="cartTotal">0 so'm</span>
+        </div>
+        <button class="btn btn--checkout" id="checkoutBtn" type="button">Buyurtma berish</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
